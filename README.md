@@ -1,14 +1,18 @@
-# Build-NCCL-Tests-With-PyTorch
+# build-nccl-tests-with-pytorch
 
 ![license](https://img.shields.io/hexpm/l/plug.svg)
 [![docker](https://img.shields.io/docker/pulls/mayooot/nccl-tests-with-pytorch.svg)](https://hub.docker.com/r/mayooot/nccl-tests-with-pytorch)
 
-# Overview
+Ready-to-use Docker image for multi-node NCCL benchmarking: PyTorch,
+[nccl-tests](https://github.com/NVIDIA/nccl-tests), and SSHD without manual
+toolchain setup.
 
-Build [NCCL-Tests](https://github.com/NVIDIA/nccl-tests) and configure SSHD in PyTorch container to help you test NCCL
-faster!
+# Why
 
-PyTorch Version: 23.11
+Running nccl-tests across multiple nodes normally requires matching CUDA,
+NCCL, MPI, and PyTorch, then configuring remote launch. This image packages a
+PyTorch 23.11 base, pre-built nccl-tests binaries, and SSHD so you can run
+multi-node collective benchmarks without assembling the toolchain yourself.
 
 # Quick Start
 
